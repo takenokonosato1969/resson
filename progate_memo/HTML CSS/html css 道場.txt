@@ -1,0 +1,236 @@
+0(土台）
+html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Progate</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <!-- ここからHTMLを書き始めてください -->
+    
+  </body>
+</html>
+
+css
+/* CSSのリセット（消さないでください） */
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Avenir Next", "Hiragino Kaku Gothic ProN W3", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+/* ここからCSSを記述してください */
+
+
+
+1
+html
+    <div class="header">
+      <div class="aaa">Progate</div>
+      <div class="header-list">
+        <ul>
+          <li>プログラミングとは</li>
+          <li>学べるレッスン</li>
+          <li>お問い合わせ</li>
+        </ul>
+      </div>
+    </div>
+
+css
+li {
+  list-style: none;
+  float: left;
+  padding:33px 20px 33px 20px;
+  
+}
+
+.header {
+  background-color: #26d0c9;
+  color: #fff;
+  height: 90px;
+}
+
+.aaa {
+  float: left;
+  font-size: 36px;
+  padding:20px 40px 20px 40px;
+};
+
+cssは末尾に;を付けない　ついたらてきおうされなくなっちゃうのだ
+
+2
+html
+ <div class="m1">
+      <div class="haropuro">
+        <h1>HELLO WORLD<span>.</span></h1>
+        <h2>プログラミングの世界へようこそ</h2>
+        </div>
+      
+       <div class="m2"></div>
+      
+       <div class="m3"></div>
+      
+    </div>
+
+css
+.m1 {
+  padding:100px 80px 100px 80px;
+  
+}
+
+.haropuro h1{
+  font-size:140px;
+}
+
+.haropuro h2{
+  font-size:60px;
+}
+
+.haropuro span{
+  color:#ff4a4a;
+}
+  
+自分のやりやすいクラス名を付けたほうがいいな
+
+3
+html
+         <div class="c1">
+        <h3 class="manaresu">学べるレッスン</h3>
+        <div class="cgazou">
+          <img src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/html.svg">
+          <p>HTML & CSS</p>
+        </div>
+        <div class="cgazou">
+          <img src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/php.svg">
+          <p>PHP</p>
+        </div>
+        <div class="cgazou">
+          <img src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/ruby.svg">
+          <p>Ruby</p>
+        </div>
+        <div class="cgazou">
+          <img src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/swift.svg">
+          <p>Swift</p>
+        </div>
+      </div>
+
+css
+.manaresu {
+  border-bottom: 2px solid #dee7ec;
+  font-size:28px;
+  
+  padding-bottom:15px;
+  
+  margin-bottom:50px;
+  
+}
+
+.cgazou {
+  float: left;
+  margin-right:40px;
+  
+}
+
+.cgazou p{
+  font-size:24px;
+  margin-top:30px;
+}
+
+変なクラス名を付けることでかみ砕いて理解を深められている気がする
+
+4
+html
+   <div class="confo">
+        <h3 class="otoi">お問い合わせ</h3>
+        <p>メールアドレス（必須）</p>
+        <input>
+        
+        <p>お問い合わせ内容（必須）</p>
+        <textarea></textarea>
+        
+        <p>※必須項目は必ずご入力ください</p>
+        <input class="hissu" type="submit" value="送信">
+        
+      </div>
+
+css
+.confo {
+  padding-top: 100px;
+}
+
+  input,textarea{
+  width:400px;
+  margin-top:10px;
+  margin-bottom:30px;
+  padding:20px;
+  font-size:18px;
+  border:1px solid #dee7ec;
+}
+
+.otoi {
+  border-bottom: 2px solid #dee7ec;
+  font-size: 28px;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+}
+
+.hissu{
+  background-color:#dee7ec;
+  color:#889eab;
+}
+
+otoi にあたるところが迷子になって焦ったぜ
+
+5
+html
+ <div class="fu">
+      <div class="puroge">Progate</div>
+      <div class="fuli">
+        <ul>
+          <li>会社概要</li>
+          <li>採用</li>
+          <li>お問い合わせ</li>
+        </ul>
+      </div>
+ </div>
+
+css
+  .fu {
+  background-color: #2f5167;
+  color: #fff;
+  height: 120px;
+  padding: 40px;
+
+}
+
+.puroge {
+  float: left;
+  font-size: 32px;
+}
+
+.fuli {
+  float: right;
+}
+
+.fuli li {
+  padding-bottom: 20px;
+}
+
+結構迷いまして、問題があったのはメインの中にフッターを入れちゃって
+変な余白が出来てしまっていた。
+ヘッダーメインフッターで分けるのは変な風に適応されるのを防ぐためだと理解できたな
+どこのdivなのかわかりにくいから<!--  -->を多用していこう
+今回はコードをどこに書いていけばいいかを学ぶことを優先してあまり記入しなかったが
+大体わかってきたらスライドを見ずに記入していきたいね

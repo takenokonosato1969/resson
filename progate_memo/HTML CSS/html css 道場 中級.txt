@@ -1,0 +1,351 @@
+0（土台）
+html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Progate</title>
+  <!-- ここでFont Awesomeを読み込んでください -->
+  
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <!-- ここにコードを書いていきましょう -->
+  
+  
+</body>
+</html>
+css
+/* CSSのリセット（消さないでください） */
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Hiragino Kaku Gothic ProN W3', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ここからCSSを書いていきましょう */
+
+1
+html
+      <!-- トップ部分 -->
+    <div class="gazou">
+      <div class="container">
+        <h1>LEARN TO CODE.</h1>
+        <h1>LEARN TO BE CREATIVE.</h1>
+        <p>Progateはオンラインプログラミング学習サービスです。</p>
+        <p>初心者にもやさしいスライドとレッスンで、Webサービスを作りながらプログラミングを学んでいきましょう。</p>
+        <div class="botan">
+          <a href="#" class="botanno sinki">新規登録はこちら</a>
+          <p>or</p>
+          <a href="#" class="botanno facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
+          <a href="#" class="botanno twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
+        </div>
+      </div>
+    </div>
+
+  <!-- トップ部分 -->
+css
+/*トップ部分 */
+.con {
+  width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.gazou {
+  padding: 180px 0 100px 0;
+  background-image: url(https://prog-8.com/images/html/advanced/top.png);
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.gazou h1 {
+  opacity: 0.7;
+  font-size: 45px;
+  letter-spacing: 5px;
+}
+
+.gazou p {
+  opacity: 0.7;
+}
+
+.botan {
+  margin: 20px 0;
+}
+
+.botan p {
+  margin: 10px 0;
+}
+
+.sinki {
+  background-color: #239b76;
+}
+
+.facebook {
+  background-color: #3b5998;
+  margin-right: 10px;
+}
+
+.twitter {
+  background-color: #55acee;
+}
+
+.botanno {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+}
+
+.botanno:hover {
+  opacity: 1;
+}
+
+.fa {
+  margin-right: 5px;
+}
+/*トップ部分 */
+最初のうちは補助輪付けて必死にこぐのだ
+
+2
+html
+  <!-- ヘッダー部分 -->
+  <header>
+      <div class="con">
+        <div class="header-l">
+          <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
+        </div>
+        <div class="header-r">
+          <a href="#" class="login">ログイン</a>
+        </div>
+      </div>
+ </header>
+ <!-- ヘッダー部分 -->
+css
+/*ヘッダー部分 */
+header {
+  height: 65px;
+  width: 100%;
+  background-color: rgba(34, 49, 52, 0.9);
+  /* positionプロパティをfixedに、topを0に指定してください */
+  position:fixed;
+  top:0px;
+  /* z-indexを10に指定してください */
+  z-index:10;
+}
+
+.logo {
+  width: 124px;
+  margin-top: 20px;
+}
+
+.header-l {
+  float: left;
+}
+
+.header-r {
+  float: right;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 0.5s;
+}
+
+.header-r:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.header-r a {
+  line-height: 65px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+}
+
+ただコピペするんじゃなくて実際に使う場合どう応用していけばいいか、
+コピペでいいところを見極めていかないと
+
+
+/*ヘッダー部分 */
+3
+html
+    <!-- メインコンテンツ部分 -->
+    <div class="konntenntu">
+      <div class="rokkaku">
+        <div class="konntenntutakasa">
+          <h2>Learn Where to Get Started!</h2>
+        </div>
+        <div class="lessons">
+          <div class="yokonarabi">
+            <div class="rokkakumoji">
+              <img src="https://prog-8.com/images/html/advanced/html.png">
+              <p>HTML & CSS</p>
+            </div>
+            <p class="rokkakusita">Webページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
+          </div>
+          <div class="yokonarabi">
+            <div class="rokkakumoji">
+              <img src="https://prog-8.com/images/html/advanced/jQuery.png">
+              <p>jQuery</p>
+            </div>
+            <p class="rokkakusita">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
+          </div>
+          <div class="yokonarabi">
+            <div class="rokkakumoji">
+              <img src="https://prog-8.com/images/html/advanced/ruby.png">
+              <p>Ruby</p>
+            </div>
+            <p class="rokkakusita">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
+          </div>
+          <div class="yokonarabi">
+            <div class="rokkakumoji">
+              <img src="https://prog-8.com/images/html/advanced/php.png">
+              <p>PHP</p>
+            </div>
+            <p class="rokkakusita">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- メインコンテンツ部分 -->
+css
+/*メインコンテンツ */
+
+
+.konntenntu {
+  height: 500px;
+  padding-bottom: 80px;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.rokkaku {
+  width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.konntenntutakasa {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: #5f5d60;
+}
+
+
+
+.konntenntutakasa h2 {
+  font-weight: normal;
+}
+
+.yokonarabi {
+  float: left;
+  width: 25%;
+}
+
+.rokkakumoji {
+  position: relative;
+}
+
+.rokkakumoji p {
+  position: absolute;
+  top: 90px;
+  width: 100%;
+  color: white;
+}
+
+.rokkakusita {
+  width: 80%;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #b3aeb5;
+}
+/*メインコンテンツ */
+ちょっと段差ができててなんだろって思ったらcss一つ入れ忘れていた
+その後文字サイズが1合わないとかで切れそうになった
+
+4
+html
+<!-- メッセージ部分 -->
+  <div class="messe">
+      <div class="rokkaku">
+        <div class="konntenntutakasa">
+          <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
+          <h3>Let's learn to code, learn to be creative!</h3>
+        </div>
+        <a href="#" class="botanno sassoku">さっそく開発する</a>
+      </div>
+    </div>
+
+
+<!-- メッセージ部分 -->
+css
+/*メッセージ部分 */
+.heading h3 {
+  font-weight: normal;
+}
+
+.messe {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.sassoku{
+  padding: 15px 40px;
+  background-color: #5dca88;
+  box-shadow: 0 7px #1a7940;
+}
+
+.sassoku:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
+
+/*メッセージ部分 */
+好きなようにクラス名を決めてたけど思わぬところで再利用されて？？？？ってなった
+まあ自分で構成考えてる時はこうならんと思いたい
+
+5
+html
+<!-- フッター部分 -->
+<footer>
+      <div class="rokkaku">
+        <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
+        <p>Learn to code, learn to be creative.</p>
+      </div>
+    </footer>
+<!-- フッター部分 -->
+
+css
+/*フッター部分 */
+footer img {
+  width: 125px;
+}
+
+footer p {
+  color: #b3aeb5;
+  font-size: 12px;
+}
+
+footer {
+  padding-top: 30px;
+}
+/*フッター部分 */
+
+全部の部分に使うクラスを六角ってクラスを付けたのはミスだな

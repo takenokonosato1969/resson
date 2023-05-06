@@ -1,0 +1,175 @@
+見出し
+<h1></h1>
+
+文
+p
+
+リンク
+<a href="URL">nanka</a>
+
+画像
+<img src="URL">
+
+リスト
+<ul> 親要素
+	<li></li>　子要素
+</ul>
+
+
+h1 {
+  color: #e6855e;
+  font-size: 30px;
+  /* 背景の色を#f3f372にしてください */
+  background:#f3f372;
+  
+  /* 高さを80pxにしてください */
+ height:80px;
+  
+  /* 幅を200pxにしてください */
+  width:200px;
+  
+}
+
+img {
+  /* 高さを50pxにしてください */
+  height:50px;
+  
+  /* 幅を70pxにしてください */
+  width:70px;
+
+
+ <li class="selected">HTML</li>　クラス宣言
+
+
+
+.selected{
+  color:#ff0000;
+}　先頭のドットを忘れずに
+
+
+
+
+<!DOCTYPE html>の部分はDOCTYPE宣言と呼ばれるもので、HTMLのバージョンを宣言するためのものです。
+今回は最新バージョンのHTMLを使うため、<!DOCTYPE html>を使用します。
+この辺りは特に気にせず、必ず記述するものだと覚えておきましょう。
+
+<head>要素にはWebページの設定に関する情報を書いていきます。
+<head>要素内に記述した内容はWebページには表示されません。
+<head>要素には必ず入れる3つの要素がありますが、それらについては次のレッスンで学びます。
+
+
+文字コードを指定することで、ページの文字化けを防ぐことができます。
+<meta charset="utf-8">とすることで、そのページの文字コードをUTF-8に指定することができます。
+UTF-8は、HTMLで推奨されている文字コードです。
+
+
+<title>要素は、ページのタイトルを指定します。
+<title>要素で指定されたタイトルは、ブラウザのタブ上に現れます。
+
+これまでProgate上では「stylesheet.css」で記述したCSSが結果に反映されていましたが、本来はHTMLの方で読み込む必要があります。
+HTMLからCSSを読み込むためには、<link rel="stylesheet">を用います。
+<link rel="stylesheet" href="stylesheet.css">のように、href属性で読み込むCSSファイルを指定します。
+
+ <div class="main"></div> 
+=忘れてミスった
+
+<div> 要素は「純粋」なコンテナーとして、本質的には何も表しません。
+その代わり、 class や id を使用してスタイル付けしやすくしたり、
+文書内で異なる言語で書かれた部分を (lang 属性を使用して) 示したりするために使用します。
+
+横並びにするやつ
+float:left;
+
+要素に余白　位置を整えるやつ
+padding:20px;
+「padding-top: 値;」などとすると、その方向のみに余白が追加されます。
+他にpadding-bottom、padding-left、padding-rightなどがあります。
+
+値を4つ、スペース区切りで指定した場合、「上」「右」「下」「左」の順で適用されます。
+値を2つ指定した場合、「上下」「左右」の順に適用されます。
+例　padding:40px 40px 40px 40px;
+合間の空白が抜けるとエラーになるので注意
+
+float: rightを用いると、指定した要素を右から順に横並びにすることができます。
+左端に配置したい「footer-logo」にはfloat: left;を、
+右端に配置したい「footer-list」にはfloat: right;を指定しましょう。
+
+続けて、メイン部分のレイアウトを作っていきましょう。
+main要素は、「copy-container」、「contents」、「contact-form」の3つの要素で構成
+
+文中の一部にCSSを適用させたい場合は、<span>要素で囲みます
+
+HTMLの要素には、改行される要素と改行されない要素があります。
+前後で改行が入り、親要素の幅一杯に広がる要素をブロック要素といいます。
+これまで勉強してきた<div>要素や<h1>要素、<p>要素はブロック要素です。
+それに対して、<span>要素や<a>要素のように改行されない要素をインライン要素といいます。
+
+<span> の最後に/入れるの忘れてエラー
+
+画像添付のコード+文章
+ <div class="contents-item">
+          <img src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/html.svg">
+          <p>HTML & CSS</p>
+          </div>
+
+<img>　に/の終わりのやつはつけなくていい　エラーではなかったが
+
+要素にボーダー（枠線）をつけるには、borderプロパティを用います。
+図のように、枠線の太さ、種類、色を指定して使用します。
+上下左右すべてに線を付けたい場合はborderとし、
+特定の場所にのみ付けたい場合は「border-bottom」のように、「border-方向」とします。
+他にborder-top、border-left、border-rightなどがあります。
+
+
+ボーダーのコード
+.section-title{
+  border-bottom:2px solid #dee7ec;
+}
+
+
+これまで余白を作るにはpaddingを使ってきましたが、paddingはborderの内側の余白を作ります。
+borderの外側に余白を作りたい場合、marginを用います。
+値の指定の方法は、paddingと同じです。
+
+これまで勉強してきたborder, padding, marginは、ボックスモデルという概念に基いています。
+HTMLの全ての要素には、border（初期状態では表示されない）があり、
+その外側の余白はmargin, 内側の余白はpaddingです。
+
+ボーダーの余白のコード
+.contents-item p{
+  font-size:24px;
+  margin-top:30px;
+}
+
+入力欄の作り方を見ていきましょう。
+<input>要素は１行のテキスト入力を受け取るための要素です。
+<textarea>要素は複数行のテキスト入力を受け取るための要素です。
+<input>要素は終了タグが不要な点に注意してください。
+
+送信ボタンにも、<input>要素を用います。
+<input>要素にはtype属性を指定することができ、type属性にsubmitを指定すると、
+入力欄ではなく、下の図のような送信ボタンになります。
+ボタンに表示されるテキストは、日本語のブラウザではデフォルトで「送信」になります。
+
+
+ボタンに表示されるテキストを変更することも可能です。
+value属性に任意の値を指定することで、ボタンに表示されるテキストを変更することができます。
+
+以下の図のように、複数のセレクタをコンマ（,）で区切ることで、
+それらに同じCSSを適用することができます。
+これを用いて、<input>要素と<textarea>要素には同じCSSを適用していきましょう。
+
+送信ボタンのコード
+　　　　　　　　　　　↓クラス　　　　↓ボタンのタイプ
+ <input class="contact-submit" type="submit" value="送信">
+　　　　　　　　　　　　　　　　　　　　　　　　　　　↑文字
+
+お問い合わせフォームのCSS
+  input,textarea{　←スペルミスっててエラー
+  width:400px;
+  margin-top:10px;　←トップとか指定せずエラー
+  margin-bottom:30px;
+  padding:20px;
+  font-size:18px;
+  border:1px solid #dee7ec;　←colorとか無駄なの入れてエラー
+}
